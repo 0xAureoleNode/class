@@ -1,4 +1,4 @@
-// Object.keys()
+// Object.entries()
 
 // define a javascript object
 let person = {
@@ -8,12 +8,12 @@ let person = {
 };
 
 // Object.keys(person)
-let keys = Object.keys(person);
-console.log(keys);
+let entries = Object.entries(person);
+console.log(entries);
 
 // loop
-for (let i = 0; i < keys.length; i++) {
-  let key = keys[i];
-  let value = person[key];
+for (let i = 0; i < entries.length; i++) {
+  let [key, value] = entries[i];
+
   console.log(`${key}: ${value}`);
 }
