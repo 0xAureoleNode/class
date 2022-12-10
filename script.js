@@ -1,15 +1,19 @@
-let x = 10;
-let y = x;
+// Object.keys()
 
-x = 20;
+// define a javascript object
+let person = {
+  name: 'John Doe',
+  age: 35,
+  city: 'New Your',
+};
 
-console.log(x);
-console.log(y);
+// Object.keys(person)
+let keys = Object.keys(person);
+console.log(keys);
 
-let c = { value: 10 };
-let v = c;
-
-c.value = 20;
-
-console.log(c);
-console.log(v);
+// loop
+for (let i = 0; i < keys.length; i++) {
+  let key = keys[i];
+  let value = person[key];
+  console.log(`${key}: ${value}`);
+}
