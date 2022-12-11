@@ -1,19 +1,12 @@
-// Object.entries()
-
-// define a javascript object
-let person = {
-  name: 'John Doe',
-  age: 35,
-  city: 'New Your',
+// exercise 1
+let address = {
+  street: 'a',
+  city: 'b',
+  zipCode: 'c',
 };
 
-// Object.keys(person)
-let entries = Object.entries(person);
-console.log(entries);
+const showAddress = (address) => {
+  for (let key in address) console.log(key, address[key]);
+};
 
-// loop
-for (let i = 0; i < entries.length; i++) {
-  let [key, value] = entries[i];
-
-  console.log(`${key}: ${value}`);
-}
+showAddress(address);
