@@ -1,54 +1,7 @@
-// this
-// method => obj
-// function => global (window, global)
-// constructor function => new empty object
-
-// const video = {
-//   title: 'a',
-//   play() {
-//     console.log(this);
-//   },
-// };
-
-// const test = function () {
-//   console.log(this);
-// };
-
-// video.play();
-// test();
-
-// special function
-/*
-const video = {
-  title: 'a',
-  tags: ['a', 'b', 'c'],
-  showTags() {
-    const self = this;
-    this.tags.forEach(function (tag) {
-      console.log(self.title, tag);
-    });
-  },
-};
-
-video.showTags();
-*/
-// function playVideo() {
-//   console.log(this);
-// }
-
-// playVideo.call({ name: 'Mosh' });
-// playVideo.apply({ name: 'Mosh' });
-
-function greet(greeting) {
-  return greeting + ' ' + this.name;
+// practice 1
+function sum(...items) {
+  if (items.length === 1 && Array.isArray(items[0])) items = [...items[0]];
+  return items.reduce((a, b) => a + b);
 }
 
-var person1 = {
-  name: 'Alice',
-};
-var person2 = {
-  name: 'Bob',
-};
-
-console.log(greet.call(person1, 'Hello')); // returns 'Hello Alice'
-greet.call(person2, 'Hello'); // returns 'Hello Bob'
+console.log(sum([1, 2, 3, 4]));
